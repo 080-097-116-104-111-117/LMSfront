@@ -1,0 +1,152 @@
+.App{
+    background-color: rgb(191, 191, 191);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 85px;
+}
+
+.text-logo{
+    width:245px;
+    margin-top: 3px;
+}
+.user{
+    cursor: pointer;
+    width: 5%;
+}
+
+.book-body{
+    padding-top: 50px;
+}
+.login-div{
+    min-height:100vh; 
+    align-items:center;
+    background-color: #ff8e19;
+}
+
+
+.login-divv{
+    border-radius: 1rem 0 0 1rem; 
+    box-shadow:-10px 10px 8px #505050;
+  }
+  
+  .login-divvv{
+    border-radius: 1rem; 
+    background-color:#ded3e1
+  }
+  .login-divvvv{
+    border-radius: 1rem 0 0 1rem;
+  }
+  .login-divvvvv{
+    letter-spacing: 1px;
+  }
+  .login1{
+    color: white; 
+    background-color: #0015f8;
+    width:100%;
+  }
+  
+  
+
+.book-grid{
+    width:80%;
+    margin: auto;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+}
+.col{
+    margin-bottom: 10px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0,0,0,.7);
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+}
+
+.img{
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    text-align: center;
+}
+
+.img>img{
+    height: 300px;
+    transition: .5s ease;
+}
+
+.img:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+.img:hover img {
+    transform: scale(1.4);
+}
+.marbtn{
+    margin-right: 5px;
+}
+
+#hidden{
+    width:60%;
+    min-height: 333px;
+    background-color:#adadad;
+    margin: auto;
+    position:absolute;
+    z-index: 999;
+    display: none;
+    padding-bottom: 20px;
+}
+#hidden1{
+    background-color: #8b8b8b;
+    position:absolute;
+    z-index: 999;
+    display: none;
+    padding-bottom: 20px;
+}
+
+.book-id{
+    display: none;
+}
+.profile-card{
+    box-shadow: 0px 8px 8px 5px #242424;
+}
+.navv>li>a{
+    font-size:20px;
+    font-weight: 700;
+    color:rgb(196, 77, 8);
+}
+/* .footer-fixed{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+} */
+/* @media only screen and (max-width: 922px) {
+    .footer-fixed {
+      position: relative;
+    }
+  } */
