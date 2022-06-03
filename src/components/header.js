@@ -1,44 +1,37 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import './style.css';
 import LOGO from './images/MKLogo.png';
 import TEXTLOGO from './images/textLogo.png';
-import USERIMG from "./images/user.png";
+import HOME from "./images/book1.jpg"
 
 function Header() {
   return (
-    <div className="App">
-          <div className="container-fluid " >
-        <div className="container d-flex justify-content-between">
-          <div className="d-flex">
-            <div className="">
-              <a href="/">
-                <img className="logo img-fluid" src={LOGO} alt="logo"/>
-              </a>
-            </div>
-            <div className="py-3">
-              <a href="/">
-                <img className="text-logo img-fluid" src={TEXTLOGO} alt="logo"/>
-              </a>
-            </div>
-          </div>
-          <div className="search-box">
-            <form className="d-flex pt-4">
-              <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="round btn btn-outline-success" type="submit"><i className="fa fa-search"></i></button>
-            </form>
-          </div>
-          <div className="user d-flex justify-content-end py-3">
-              <img src={USERIMG} className="img-fluid" alt="logo" />
-            <div >
-              <form action="/logout" method="post">
-                <button className="btn btn-lg text-light  mt-1 justify-content-center" type="submit">LogOut</button>
-              </form>
+    <div style={{ backgroundColor: "#001254" }}>
+      <div className="App">
+        <div className="homeImg">
+          <img src={HOME} alt="home" />
+          <div className="middle">
+            <div className="middle1">
+              <div className="d-flex mb-3 justify-content-center">
+                <div className="">
+                  <Link to="/">
+                    <img className="logo img-fluid" src={LOGO} alt="logo" />
+                  </Link>
+                </div>
+                <div className="py-3">
+                  <Link to="/">
+                    <img className="text-logo img-fluid" src={TEXTLOGO} alt="logo" />
+                  </Link>
+                </div>
+              </div>
+              <div className="text1"><h1><q>The only thing that you absolutely have to know, is the location of the library.</q></h1></div>
             </div>
           </div>
-
         </div>
+
       </div>
-       
+      <Outlet />
     </div>
   );
 }
